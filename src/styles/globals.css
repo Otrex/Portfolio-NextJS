@@ -1,9 +1,41 @@
+/* @tailwind base;
+@tailwind components;
+@tailwind utilities; */
+
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+@import url("https://fonts.googleapis.com/css2?family=Caveat:wght@700&family=Old+Standard+TT:wght@400;700&family=Poppins:ital,wght@0,500;0,600;0,700;1,100&family=Prata&family=Roboto:wght@300;500;900&display=swap");
 :root {
+  --bg-color: rgba(23, 23, 23, 1);
+  --font-caveat: "Caveat", cursive;
+  --font-poppins: "Poppins", cursive;
+  --font-old-standard-tt: "Old Standard TT", serif;
+  --font-prata: "Prata", serif;
+  --font-mono: ui-monospace, Menlo, Monaco, "Cascadia Mono", "Segoe UI Mono",
+    "Roboto Mono", "Oxygen Mono", "Ubuntu Monospace", "Source Code Pro",
+    "Fira Mono", "Droid Sans Mono", "Courier New", monospace;
+}
+
+/* font-family: 'Caveat', cursive;
+font-family: 'Old Standard TT', serif;
+font-family: 'Poppins', sans-serif;
+font-family: 'Prata', serif; */
+
+* {
+  transition: all 0.3s;
+}
+body {
+  background-color: var(--bg-color);
+  font-family: "Roboto", sans-serif;
+}
+/* :root {
   --max-width: 1100px;
   --border-radius: 12px;
-  --font-mono: ui-monospace, Menlo, Monaco, 'Cascadia Mono', 'Segoe UI Mono',
-    'Roboto Mono', 'Oxygen Mono', 'Ubuntu Monospace', 'Source Code Pro',
-    'Fira Mono', 'Droid Sans Mono', 'Courier New', monospace;
+  --font-mono: ui-monospace, Menlo, Monaco, "Cascadia Mono", "Segoe UI Mono",
+    "Roboto Mono", "Oxygen Mono", "Ubuntu Monospace", "Source Code Pro",
+    "Fira Mono", "Droid Sans Mono", "Courier New", monospace;
 
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
@@ -104,4 +136,67 @@ a {
   html {
     color-scheme: dark;
   }
+}
+
+* {
+  color: white !important;
+} */
+.effect-1,
+.effect-2 {
+  overflow: hidden;
+}
+
+.accent-btn {
+  @apply px-[1rem] py-[.75rem] bg-black text-white mt-4 mr-2 font-medium;
+}
+
+.accent-btn:hover {
+  @apply px-[1.5rem] py-[.85rem];
+}
+
+.accent-btn-lite {
+  @apply px-[1rem] py-[.5rem] bg-white text-black border-4 border-black mt-4 font-medium;
+}
+
+.accent-btn-lite:hover {
+  @apply px-[1.5rem] py-[.7rem];
+}
+
+.skill-card {
+  @apply bg-white min-w-[20rem] aspect-square;
+}
+
+
+
+.skill-card .list-count {
+  @apply font-mono text-3xl;
+}
+
+.project-card {
+  @apply bg-white max-w-[20rem] aspect-[2/3];
+}
+
+
+
+.project-card .list-count {
+  @apply font-mono text-3xl;
+}
+
+.nav {
+  margin: 0;
+  padding: 0;
+}
+
+.nav li {
+  list-style: none;
+  display: inline-block;
+}
+
+.nav li a {
+  padding: 0.5rem 2rem;
+  @apply font-bold;
+}
+
+.nav li a:hover {
+  border-bottom: 0.3rem solid white;
 }
